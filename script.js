@@ -66,16 +66,17 @@ function checkUserNameDetails(userName) {
 }
 
 function showHomeDetails() {
-    let userNmaeDisplay = localStorage.getItem("UserName");
+    let userNameDisplay = localStorage.getItem("UserName");
     console.log(userNmaeDisplay);
-    if (userNmaeDisplay !== null) {
+    let userNameDisplayElement=document.getElementById('userNameDisplay').innerHTML;
+    if (userNameDisplay !== null) {
         formContainer.style.display = "none";
-        document.getElementById('userNameDisplay').innerHTML = userNmaeDisplay;
+        userNameDisplayElement= userNameDisplay;
         homeDetails.style.display = "block";
 
     }
     else {
-        formContainer.style.display = "block";
+        formContainer.style.display = "flex";
     }
 }
 
@@ -84,8 +85,10 @@ function checkLoginDetails() {
     let userName = document.getElementById('userName').value;
     let userpassword = document.getElementById('userPassword').value;
 
+    let userNameDetailsConfirm=checkUserNameDetails(userName);
+    let userPasswordDetailsConfirm=checkPasswordValidity(userpassword);
 
-    if (checkUserNameDetails(userName) && checkPasswordValidity(userpassword)) {
+    if (userNameDetailsConfirm && userPasswordDetailsConfirm) {
         localStorage.setItem("UserName", userName);
         showHomeDetails();
     }
