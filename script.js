@@ -67,11 +67,10 @@ function checkUserNameDetails(userName) {
 
 function showHomeDetails() {
     let userNameDisplay = localStorage.getItem("UserName");
-    console.log(userNmaeDisplay);
-    let userNameDisplayElement=document.getElementById('userNameDisplay').innerHTML;
+    let userNameDisplayElement=document.getElementById('userNameDisplay');
     if (userNameDisplay !== null) {
         formContainer.style.display = "none";
-        userNameDisplayElement= userNameDisplay;
+        userNameDisplayElement.innerHTML= userNameDisplay;
         homeDetails.style.display = "block";
 
     }
