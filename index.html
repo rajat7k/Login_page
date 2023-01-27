@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="login-form-container">
+        <div class="form-container">
+            <div class="image-conatiner">
+                <img src="https://res.cloudinary.com/dbdaib57x/image/upload/v1674801082/Union_tzlmon.png" alt="">
+            </div>
+            <div class="user-input-container username-box">
+                <img class="user-input-icon" src="https://res.cloudinary.com/dbdaib57x/image/upload/v1674801082/user_gnwtcq.png" alt="">
+                <input type="text" name="UserName" id="userName" class="user-input" placeholder="USERNAME">
+            </div>
+            <p id="userNameError" class="user-name-error"></p>
+
+            <div class="user-input-container password-box">
+                <img class="user-input-icon" src="https://res.cloudinary.com/dbdaib57x/image/upload/v1674801082/lock_ekkduw.png" alt="">
+                <input type="text" name="UserPasswrod" id="userPassword" class="user-input" placeholder="PASSWORD">
+            </div>
+            <p id="userPasswordError" class="user-password-error"></p>
+            <button onclick="checkLoginDetails()" class="login-btn" id="loginBtn">LOGIN</button>
+            <a class="forget-pass" href="">Forget password?</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
